@@ -44,10 +44,10 @@
     <script src="https://www.finereport.com/tw/wp-content/themes/BusinessNews/jihuo/menutw.js?123"></script>
 	 <link rel="stylesheet" href="https://www.finereport.com/en/wp-content/themes/Newweb/CSS/feedback.css?1111" />
 	<title>
-        <?php if (is_home()) {echo "FineReport-BI商業智慧和動態報表軟體|資料分析與視覺化工具";}
-        elseif(is_page())  {echo get_post_meta($post->ID,"title_single", true);}
-        elseif (is_search()) {echo "搜索結果 | FineReport-BI商業智慧和動態報表軟體|資料分析與視覺化工具";} elseif (is_404())
-        {echo "頁面未找到!";}else {wp_title('',true);echo " | FineReport-BI商業智慧和動態報表軟體|資料分析與視覺化工具";} ?>
+<!--        --><?php //if (is_home()) {echo "FineReport-BI商業智慧和動態報表軟體|資料分析與視覺化工具";}
+//        elseif(is_page())  {echo get_post_meta($post->ID,"title_single", true);}
+//        elseif (is_search()) {echo "搜索結果 | FineReport-BI商業智慧和動態報表軟體|資料分析與視覺化工具";} elseif (is_404())
+//        {echo "頁面未找到!";}else {wp_title('',true);echo " | FineReport-BI商業智慧和動態報表軟體|資料分析與視覺化工具";} ?>
     </title>
     <meta http-equiv="X-UA-Compatible" content = "IE=edge,chrome=1" />
     <meta http-equiv="Expires" content="Thu, 30 Oct 2014 05:03:00 GMT" />
@@ -55,21 +55,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script src="http://www.finereport.com/en/js/medium-check.js"></script>
+    <script src="http://www.finereport.com/en/js/jquery.min.js"></script>
+    <script src="http://www.finereport.com/en/js/common-v5.js"></script>
 
-    <?php if ( is_home() ) { ?>
-        <meta name="keywords" content="報表,BI,商業智慧,報表軟體,報表工具,免費報表軟體,資料分析,資料視覺化,報表設計,動態報表,web報表,java報表工具,finereport,帆軟" />
-        <meta name="description" content="帆軟finereport是一款高效易用的純Java報表工具，首創了B/S設計器應用和移動BI應用，集數據展示(報表)、數據查詢(參數)和數據錄入(填報)於一身，是製作複雜中式報表的首選商業web報表軟體，免費報表設計器可下載使用，藉助此報表，用戶可以輕鬆搭建報表平台和報表中心。" />
-    <?php } ?>
-
-    <?php if ( is_single() || is_page() ) { ?>
-        <meta name="keywords" content="<?php $key="keywords"; echo get_post_meta($post->ID, $key, true); ?>" />
-        <meta name="description" content="<?php $key="description"; echo get_post_meta($post->ID, $key, true); ?>" />
-    <?php } ?>
-<?php if ( is_category() ) { ?>
-    <link rel="canonical" href="<?php echo get_category_link(get_query_var('cat')); ?>" />
-    <meta name="keywords" content="<?php  echo single_cat_title('', false); ?>" />
-    <meta name="description" content="<?php echo  category_description(); ?>" />
-<?php } ?>
+<!--    --><?php //if ( is_home() ) { ?>
+<!--        <meta name="keywords" content="報表,BI,商業智慧,報表軟體,報表工具,免費報表軟體,資料分析,資料視覺化,報表設計,動態報表,web報表,java報表工具,finereport,帆軟" />-->
+<!--        <meta name="description" content="帆軟finereport是一款高效易用的純Java報表工具，首創了B/S設計器應用和移動BI應用，集數據展示(報表)、數據查詢(參數)和數據錄入(填報)於一身，是製作複雜中式報表的首選商業web報表軟體，免費報表設計器可下載使用，藉助此報表，用戶可以輕鬆搭建報表平台和報表中心。" />-->
+<!--    --><?php //} ?>
+<!---->
+<!--    --><?php //if ( is_single() || is_page() ) { ?>
+<!--        <meta name="keywords" content="--><?php //$key="keywords"; echo get_post_meta($post->ID, $key, true); ?><!--" />-->
+<!--        <meta name="description" content="--><?php //$key="description"; echo get_post_meta($post->ID, $key, true); ?><!--" />-->
+<!--    --><?php //} ?>
+<?php //if ( is_category() ) { ?>
+<!--    <link rel="canonical" href="--><?php //echo get_category_link(get_query_var('cat')); ?><!--" />-->
+<!--    <meta name="keywords" content="--><?php // echo single_cat_title('', false); ?><!--" />-->
+<!--    <meta name="description" content="--><?php //echo  category_description(); ?><!--" />-->
+<?php //} ?>
     <style>
         body,html{
             font-family: 'PingFangSC-Light','Hiragino Sans GB','Microsoft YaHei','OpenSans','Myriad Pro','Verdana';
@@ -608,6 +611,7 @@
             font-size: 15px;
         }
     </style>
+
 </head>
 <body>
 
@@ -1080,10 +1084,9 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
     </div>
     <button class="feedbackClick" onclick="feedback()" id="feedbackClick">表單有問題</button>
 </div>
-<script src="http://www.finereport.com/en/js/medium-check.js"></script>
-<script src="http://www.finereport.com/en/js/common-v5.js"></script>
 
-<script src="http://www.finereport.com/en/js/jquery.min.js"></script>
+
+
 <script src="http://www.finereport.com/en/wp-content/themes/Newweb/js/jquery.easing.min.js"></script>
 <script src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/js/POPUP.js"></script>
 
