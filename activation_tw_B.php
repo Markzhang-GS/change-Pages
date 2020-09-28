@@ -461,7 +461,9 @@
 
         @media (min-width: 888px) {
             .Activation_BOx_Wrapper_Content_Left {
-            display: flex;
+            /*display: flex;*/
+                display: block;
+                margin:0 auto;
             }
         }
         @media (min-width: 888px) {
@@ -755,7 +757,6 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
                     <ul class="Activation_Steps" id="Activation_Steps">
                         <li class="Activation_Step Activation_Step_after step--current">1</li>
                         <li class="Activation_Step Activation_Step_after ">2</li>
-<!--                        <li class="Activation_Step  ">3</li>-->
                     </ul>
                        <h2 style="margin-bottom: 20px;font-size: 30px;">獲取免費版FineReport軟體&激活碼</h2>
                     <p style="font-size: 18px;line-height: 27px;width: 300px;color: grey;">
@@ -816,7 +817,7 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
             </div>
         </div>
         <div class="Activation_Box_Wrapper">
-            <div class="Activation_BOx_Wrapper_Content">
+            <div class="Activation_BOx_Wrapper_Content" style="display:block;">
                 <div class="Activation_BOx_Wrapper_Content_Right">
                     <button class="Activation_Back_Link Activation_Back_Link_2 Activation_Fine-Link previous"
                             type="button" name="previous">
@@ -824,32 +825,18 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
                         <span>上一步</span>
                     </button>
 <!--                    激活第二个页面-->
-                    <ul class="Activation_Steps">
+                    <ul class="Activation_Steps" style="">
                         <li class="Activation_Step Activation_Step_after step--ready">1</li>
                         <li class="Activation_Step Activation_Step_after step--current ">2</li>
-<!--                        <li class="Activation_Step ">3</li> 修改-->
                     </ul>
-                    <h2 style=“font-size:30px;margin-bottom:20px;”>
-                        完善資料，我們將為您提供適合您的學習資料，企業案例和客製化方案！
 
-
-                    </h2>
-                    <p style=“font-size:16px;line-height:24px;color:grey;”>
-                        任何問題請與我們聯絡。
-                    </p>
-                    <br/>
-                    <div>
-                        <img src="http://www.finereport.com/en/wp-content/themes/Newweb/images/activation/Step2.png"
-                             class="" style="width:100%;"/>
-                    </div>
-                    <a style="display:block; text-decoration:none; margin-top:30px;"
-                       href='mailto:taiwan@fanruan.com?&subject=Activation%20code'>聯絡我們: <u>taiwan@fanruan.com</u></a>
 
 
                 </div>
                 <div class="Activation_BOx_Wrapper_Content_Right Activation_BOx_Wrapper_Content_Left">
-
-                    <form action="" method="post" id="form2" class="Activation_form" onsubmit="return false"
+                    <h2 style="text-align: center;font-size: 1.5em;margin-bottom: 20px;margin-top:20%;">完善資料</h2>
+                    <p style="font-size: 1em;line-height: 24px;color: grey;">我們將為您提供適合您的學習資料，企業案例與客製化方案</p>
+                    <form action="/tw/new_success" method="post" id="form2" class="Activation_form"
                           style="margin-top:40px;">
                         <div class="form-control">
 
@@ -970,7 +957,7 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
                             echo $_product_key
                         ?>">
                         <button type="submit" id="next2" name="next" class="next2"
-                                onclick="connectcrmtw();ga('send','pageview','/virtual/active-step2');">確認提交
+                                onclick="ga('send','pageview','/virtual/active-step2');">確認提交
                         </button>
                     </form>
                     <script>
@@ -982,82 +969,6 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
                 </div>
             </div>
         </div>
-        <div class="Activation_Box_Wrapper">
-            <div class="Activation_BOx_Wrapper_Content">
-                <div class="Activation_BOx_Wrapper_Content_Right">
-                    <button class="Activation_Back_Link Activation_Fine-Link previous" type="button" name="previous">
-                        <span><-</span>
-                        <span>上一步</span>
-                    </button>
-<!--                    激活第三个页面-->
-                    <ul class="Activation_Steps">
-                        <li class="Activation_Step Activation_Step_after step--ready">1</li>
-                        <li class="Activation_Step Activation_Step_after step--ready">2</li>
-<!--                        <li class="Activation_Step step--current">3</li>-->
-                    </ul>
-                    <h2 style="margin-bottom:56px;">
-
-                    </h2>
-                    <div>
-                        <img src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Activation_FB.png"
-                             class="" style="width:100%;"/>
-                    </div>
-
-
-                </div>
-                <div class="Activation_BOx_Wrapper_Content_Right Activation_BOx_Wrapper_Content_Left">
-                    <form action="https://www.finereport.com/tw/new_success" method="post" id="form3"
-                          class="Activation_form" style="padding-left: 15px;">
-                        <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous"
-                                src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v6.0&appId=599951227079418&autoLogAppEvents=1"></script>
-                        <div style="margin-top: 50px; text-align: center;">
-                            <h3 style="margin-bottom: 10px; font-size:25px;"><a id="FBTW"
-                                                                                href="https://www.facebook.com/twfinereport/"
-                                                                                target="_blank"
-                                                                                style="text-decoration: none">加入帆軟臉書/Line粉絲團</a>
-                                獲取</h3>
-                                                       <p style="font-size: 14px; color: grey;font-weight:bold;"
-                                                          id="FB33">最新課程資訊,海量學習資料,豐富企業實例</p>
-                            <div class="fb" style="float:left; width: 50%;">
-                                <img
-                                    src="https://www.finereport.com/tw/wp-content/themes/BusinessNews/images/fbqrcode.jpg"
-                                    alt="" style="width: 100%;">
-                                <div class="fb-like" data-href="https://www.facebook.com/twfinereport/"
-                                     data-width="100px" data-layout="button_count" data-action="like" data-size="large"
-                                     data-share="false"></div>
-                                <p style="font-size: 12px; margin-top: 7px;color: grey;">按贊1s領取資料人才必備懶人包</p>
-                            </div>
-                            <div class="line">
-                                <img src="https://www.finereport.com/tw/wp-content/themes/BusinessNews/images/Line.png"
-                                     alt="" style="width: 50%;"><br>
-                                <a href="https://lin.ee/K8bh9iV" target="_blank"><img
-                                        src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png" alt="加入好友"
-                                        height="30" border="0"></a>
-                                <p style="font-size: 12px;"><a href="https://lin.ee/K8bh9iV" target="_blank"
-                                                               style="color: #7d8189;text-decoration: none;"
-                                                               id="lineTW">回覆簡報送最新10.0產品簡報</a></p>
-                            </div>
-                            <input type="text" style="display: none;" id="KEY" name="KEY" value="<?php
-                                echo $_product_key
-                            ?>">
-
-                                                   
-                            <button id="Submit_FB" type="submit" name="next" class="next3"  style="margin-top: 20px;"
-                                    onclick="ga('send','pageview','/virtual/active-step3');"  >完成激活
-                            </button>
-
-
-                    </form>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-
     </div>
 
 </div>
