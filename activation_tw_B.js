@@ -25,7 +25,7 @@ var other2 = document.getElementById('others_indeed2');
 
 
 $(".next1").click(function(){
-    if(checkInputs1() == 4) {
+    if(checkInputs1() == 3) {
         if (animating) return false;
         animating = true;
         current_fs = $(this).parent().parent().parent().parent();
@@ -66,7 +66,7 @@ $(".next1").click(function(){
 
 $(".next2").click(function(){
 
-    if(checkInputs2() == 6) {
+    if(checkInputs2() == 7) {
         if (animating) return false;
         animating = true;
 
@@ -114,8 +114,8 @@ function checkInputs1() {
     // trim to remove the whitespaces
     var usernameValue = username.value.trim();
     var emailValue = email.value.trim();
-    var SMSValue = SMS.value.trim();
-    var telValue = tel2.value.trim();
+
+    var jobValue = job.value.trim();
     var a=0;
 
 
@@ -137,20 +137,12 @@ function checkInputs1() {
         a+=1;
     }
 
-    if (telValue === '') {
-        setErrorFor(tel, '\n' +
-            '請填寫您的號碼');
-    }
-    else {
-        setSuccessFor(tel);
-        a+=1;
-    }
 
-    if (SMSValue === '') {
-        setErrorFor(SMS, '請輸入驗證碼');
-    }
-    else {
-        setSuccessFor(SMS);
+    if (jobValue === '' && other2Value === '') {
+        setErrorFor(job, '\n' +
+            '請選擇您的職業');
+    } else {
+        setSuccessFor(job);
         a+=1;
     }
 
@@ -162,7 +154,7 @@ function checkInputs1() {
 }
 
 function checkInputs2() {
-    var jobValue = job.value.trim();
+
     var companyValue = company.value.trim();
     var methodValue = method.value.trim();
     var requestValue = request.value.trim();
@@ -170,18 +162,14 @@ function checkInputs2() {
     var industryValue = industry.value.trim();
     var other1Value = other1.value.trim();
     var other2Value = other2.value.trim();
+    var SMSValue = SMS.value.trim();
+    var telValue = tel2.value.trim();
 
 
 
     var b=0;
 
-    if (jobValue === '' && other2Value === '') {
-        setErrorFor(job, '\n' +
-            '請選擇您的職業');
-    } else {
-        setSuccessFor(job);
-        b+=1;
-    }
+
 
     if (companyValue === '') {
         setErrorFor(company, '請填入您的公司名稱');
@@ -223,6 +211,22 @@ function checkInputs2() {
     }
     else {
         setSuccessFor(request);
+        b+=1;
+    }
+    if (telValue === '') {
+        setErrorFor(tel, '\n' +
+            '請填寫您的號碼');
+    }
+    else {
+        setSuccessFor(tel);
+        b+=1;
+    }
+
+    if (SMSValue === '') {
+        setErrorFor(SMS, '請輸入驗證碼');
+    }
+    else {
+        setSuccessFor(SMS);
         b+=1;
     }
 
