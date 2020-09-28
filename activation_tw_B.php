@@ -1221,7 +1221,7 @@ $_product_key = '58237f37-d6206a184-0192-6902030fc228';
 
 </script>
 
-<script src="http://www.finereport.com/tw/wp-content/themes/BusinessNews/js/ACTIVATION_MULTI_TW.js?232224123124344"></script>
+<script src="activation_tw_B.js"></script>
 <script src="http://www.finereport.com/en/wp-content/themes/Newweb/js/feedback.js?1111111"></script>
 
 </body>
